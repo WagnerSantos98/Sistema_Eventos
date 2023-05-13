@@ -1,4 +1,4 @@
-##Sistema de Eventos
+#Sistema de Eventos
 
  - Cadastro de eventos
  - Acesso de ADM - Nível de acesso
@@ -21,4 +21,7 @@ Cada item dessa seção tem um botão para efetuar a inscrição do mesmo.
 
 Interface simples com nível de acesso a página onde irão inserir os eventos e ver a quantidade de ingressante, gerar relatório de eventos, contabilizando quantidade de participantes, cursos, e por período.
 
+
+#Processo de inscrição
+O aluno seleciona o evento que deseja participar e se inscreve através de um pequeno formulário solicitando ra e preenchendo automaticamente o nome do aluno, para assim não ter erros no processo de validação de horas e criação do certificado.
 
