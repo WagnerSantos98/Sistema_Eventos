@@ -5,6 +5,7 @@
  - Import de alunos cadastrado no evento
  - Leitura de RA
  - Geração de certificados - exportação dos dados .CSV
+ - Backend - PHP
 
 
 ### Página inicial
