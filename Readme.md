@@ -10,7 +10,8 @@
 
 ### Página inicial
 
-Neste guia irá conter uma página de apresentação dos principais eventos, de acordo com o grau de relevância
+Neste guia irá conter uma página de apresentação dos principais eventos, de acordo com o grau de relevância.
+Também criar uma galeria dos eventos importantes e notificar o prazo de inscrição aos alunos.
 
 
 ### Eventos
