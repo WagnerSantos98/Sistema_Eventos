@@ -6,6 +6,9 @@
  - Leitura de RA
  - Geração de certificados - exportação dos dados .CSV
  - Backend - PHP
+ - Criação de logo ou criação de arte para divulgação
+ - Criação da interface no Figma e exportação do projeto
+ - Elaborar escopo do projeto e banco de dados a ser trabalhado
 
 
 ### Página inicial
