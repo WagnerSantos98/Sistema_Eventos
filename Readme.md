@@ -38,3 +38,8 @@ Crédito aos criadores e inspiração do projeto.
  - Nível de acesso (ADM, Padrão)
 Acessando como ADM terá a possibilidade de adicionar o evento, ver a lista completa de inscritose gerar relatório do mesmo.
 Acessando como Padrão será possível somente conferir a quantidade de inscritos.
+
+### Banco de Dados
+ - tb_usuarios
+ - tb_eventos
+ - tb_alunos
