@@ -1,5 +1,7 @@
 # Sistema de Eventos
 
+
+### Processos a serem feitos
  - Cadastro de eventos
  - Acesso de ADM - Nível de acesso
  - Import de alunos cadastrado no evento
@@ -9,6 +11,7 @@
  - Criação de logo ou criação de arte para divulgação
  - Criação da interface no Figma e exportação do projeto
  - Elaborar escopo do projeto e banco de dados a ser trabalhado
+ - Criar cronograma de projeto, etapas a serem realizadas
 
 
 ### Página inicial
