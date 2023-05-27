@@ -12,6 +12,8 @@
  - Criação da interface no Figma e exportação do projeto
  - Elaborar escopo do projeto e banco de dados a ser trabalhado
  - Criar cronograma de projeto, etapas a serem realizadas
+ - Estruturação do banco de dados MySQL
+
 
 
 ### Página inicial
