@@ -3,6 +3,10 @@
 include_once('../db/conexao.php');
 session_start();
 
+if (!isset($_SESSION['nome'])) {
+    header("Location: ./login.php");
+} 
+
 error_reporting(0);
 
 //Cadastro de usuário
@@ -13,14 +17,14 @@ if (isset($_POST['btn_usuario'])) {
 		$sql = "SELECT * FROM tb_usuarios WHERE email='$email'";
 		$result = mysqli_query($conn, $sql);
 		if (!$result->num_rows > 0) {
-			$sql = "INSERT INTO tb_usuarios (nome, tipo_acesso, email, senha)
+			$sql = "INSERT INTO tb_usuarios (nome, email, senha)
 					VALUES ('$nome', '$email', '$senha')";
 			$result = mysqli_query($con, $sql);
 			if ($result) {
-				echo "<script>alert('Wow! Registro do usuário concluído.')</script>";
 				$nome = "";
 				$email = "";
 				$_POST['senha'] = "";
+                echo "<script>alert('Wow! Registro do usuário concluído.')</script>";
 			} else {
 				echo "<script>alert('Woops! Algo errado aconteceu.')</script>";
 			}
@@ -28,6 +32,7 @@ if (isset($_POST['btn_usuario'])) {
 			echo "<script>alert('Woops! E-mail já existe.')</script>";
 		}
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -94,16 +99,16 @@ if (isset($_POST['btn_usuario'])) {
             <li><a href="#" id="autoplayer" data-uk-switcher-item="next"></a>
             <form class="uk-grid-small" uk-grid method="POST" action="">
                 <div class="uk-width-1-1">
-                    <label>Nome Completo</label>
-                    <input class="uk-input" type="text" name="nome">
+                    <label for="nome">Nome Completo</label>
+                    <input class="uk-input" id="nome" type="text" name="nome">
                 </div>
                 <div class="uk-width-1-2@s">
-                    <label>Email</label>
-                    <input class="uk-input" type="email" name="email">
+                    <label for="email">Email</label>
+                    <input class="uk-input" id="email" type="email" name="email">
                 </div>
                 <div class="uk-width-1-4@s">
-                    <label>Senha</label>
-                    <input class="uk-input" type="password" name="senha">
+                    <label for="senha">Senha</label>
+                    <input class="uk-input" id="senha" type="password" name="senha">
                 </div>
                 <div class="uk-width-1-4@s"><br>
                     <button class="uk-button uk-button-primary" name="btn_usuario" type="submit">Salvar</button>
