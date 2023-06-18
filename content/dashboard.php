@@ -1,21 +1,49 @@
 <?php
+//Incluindo conexão com banco de dados e iniciando a seção
+include_once('../db/conexao.php');
+session_start();
 
+error_reporting(0);
+
+//Cadastro de usuário
+if (isset($_POST['btn_usuario'])) {
+	$nome = $_POST['nome'];
+    $email = $_POST['email'];
+	$senha = sha1($_POST['senha']);
+		$sql = "SELECT * FROM tb_usuarios WHERE email='$email'";
+		$result = mysqli_query($conn, $sql);
+		if (!$result->num_rows > 0) {
+			$sql = "INSERT INTO tb_usuarios (nome, tipo_acesso, email, senha)
+					VALUES ('$nome', '$email', '$senha')";
+			$result = mysqli_query($con, $sql);
+			if ($result) {
+				echo "<script>alert('Wow! Registro do usuário concluído.')</script>";
+				$nome = "";
+				$email = "";
+				$_POST['senha'] = "";
+			} else {
+				echo "<script>alert('Woops! Algo errado aconteceu.')</script>";
+			}
+		} else {
+			echo "<script>alert('Woops! E-mail já existe.')</script>";
+		}
+}
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8"><i uk-icon="user"></<i uk-icon="user"></i> <i uk-icon="user"></i> <i uk-icon="user"></i> i> 
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--Compiled CSS-->
-    <link rel="stylesheet" href="assets/css/uikit.min.css">
+    <link rel="stylesheet" href="../assets/css/uikit.min.css">
 
     <!--Compiled JS-->
-    <script src="assets/js/uikit.min.js"></script>
+    <script src="../assets/js/uikit.min.js"></script>
 
     <!--Compiled Icons-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.14/js/uikit-icons.min.js"></script>
-    <title>Home</title>
+    <title>Sistema de Eventos</title>
 </head>
 <body>
     <header>
@@ -32,8 +60,8 @@
             <ul class="uk-navbar-nav uk-visible@s">
                 <li class="uk-active"><a href="#">Pagina Inicial</a></li>
                 <li><a href="#">Eventos</a></li>
-                <li><a href="#">Eventos</a></li>
-                <li><a href="./content/login.php"><i uk-icon="user"></i> USF Eventos</a></li>
+                <li><a href="#">Cadastro</a></li>
+                <li><a href="./logout.php"><i uk-icon="sign-out"></i></a></li>
             </ul>
             <!--Menu Icon-->
             <a href="#" class="uk-navbar-toggle uk-hidden@s" uk-navbar-toggle-icon uk-toggle="target: #sidenav"></a>
@@ -47,15 +75,46 @@
         <ul class="uk-nav">
             <li><a href="#">Pagina Inicial</a></li>
             <li><a href="#">Eventos</a></li>
-            <li><a href="#">Eventos</a></li>
-            <li><a href="./content/login.php"><i uk-icon="user"></i> USF Eventos</a></li>  
+            <li><a href="#">Cadastro</a></li>
+            <li><a href="./logout.php"><i uk-icon="sign-out"></i></a></li>  
         </ul>
     </div>
 </div>
 
 <!--Página Inicial-->
 <div class="uk-container">
-    <h2>Teste</h2>
+    <div class="uk-container uk-container-center">
+    <h3 class="uk-margin-top">Cadastros</h3>
+        <ul class="uk-tab" data-uk-tab="{connect:'#my-id'}">
+            <li><a href="">Usuários</a></li>
+            <li><a href="">Tab 2</a></li>
+            <li><a href="">Tab 3</a></li>
+        </ul>
+        <ul id="my-id" class="uk-switcher uk-margin">
+            <li><a href="#" id="autoplayer" data-uk-switcher-item="next"></a>
+            <form class="uk-grid-small" uk-grid method="POST" action="">
+                <div class="uk-width-1-1">
+                    <label>Nome Completo</label>
+                    <input class="uk-input" type="text" name="nome">
+                </div>
+                <div class="uk-width-1-2@s">
+                    <label>Email</label>
+                    <input class="uk-input" type="email" name="email">
+                </div>
+                <div class="uk-width-1-4@s">
+                    <label>Senha</label>
+                    <input class="uk-input" type="password" name="senha">
+                </div>
+                <div class="uk-width-1-4@s"><br>
+                    <button class="uk-button uk-button-primary" name="btn_usuario" type="submit">Salvar</button>
+                </div>
+
+            </form>
+            </li>
+            <li>Content 2</li>
+            <li>Content 3</li>
+        </ul>
+    </div>
 </div>
 
 </body>
