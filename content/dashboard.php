@@ -1,7 +1,10 @@
+<?php
+
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"><i uk-icon="user"></<i uk-icon="user"></i> <i uk-icon="user"></i> <i uk-icon="user"></i> i> 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--Compiled CSS-->
@@ -29,7 +32,8 @@
             <ul class="uk-navbar-nav uk-visible@s">
                 <li class="uk-active"><a href="#">Pagina Inicial</a></li>
                 <li><a href="#">Eventos</a></li>
-                <li><a href="#">Login</a></li>
+                <li><a href="#">Eventos</a></li>
+                <li><a href="./content/login.php"><i uk-icon="user"></i> USF Eventos</a></li>
             </ul>
             <!--Menu Icon-->
             <a href="#" class="uk-navbar-toggle uk-hidden@s" uk-navbar-toggle-icon uk-toggle="target: #sidenav"></a>
@@ -37,13 +41,14 @@
     </nav>
 </header>
 
-<!--Sidena Mobile-->
+<!--Sidenav Mobile-->
 <div id="sidenav" uk-offcanvas="flip:true" class="uk-offcanvas">
     <div class="uk-offcanvas-bar">
         <ul class="uk-nav">
             <li><a href="#">Pagina Inicial</a></li>
             <li><a href="#">Eventos</a></li>
-            <li><a href="#">Login</a></li>  
+            <li><a href="#">Eventos</a></li>
+            <li><a href="./content/login.php"><i uk-icon="user"></i> USF Eventos</a></li>  
         </ul>
     </div>
 </div>

@@ -1,3 +1,33 @@
+<?php
+
+//Incluindo conexão com banco de dados
+include_once('../db/conexao.php');
+
+session_start();
+
+error_reporting(0);
+
+if(isset($_SESSION['username'])){
+    header("Location: ./dashboard.php");
+}
+
+if(isset($_SESSION['btn-acessar'])){
+    $email = $_POST['email'];
+    $senha = sha1($_POST['senha']);
+
+    $sql = "SELECT * FROM tb_usuarios WHERE email='$email' AND senha='$senha'";
+    $result = mysqli_query($con, $sql);
+    if($result->num_rows > 0){
+        $row = mysqli_fetch_assoc($result);
+        $_SESSION['username'] = $row['username'];
+        header("Location: ./dashboard.php");
+    }else{
+        echo "<script>alert('Oooops! Email ou senha incorretos. ')</script>" ;  
+    }
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -24,14 +54,14 @@
                 <header class="sub-header">Bem vindo ao <b>Sistema de Eventos USF!</b></header>
 
                 <!--Formulário-->
-                <form action="">
+                <form action="" method="POST">
                     <div class="input-container">
                         <label for="emailAddress" class="label"><img src="../assets/img/bx-envelope.svg" class="label-icon"><span>Email*</span></label>
-                        <input type="email" class="input" id="emailAddress" placeholder="Insira seu email">
+                        <input type="email" class="input" id="emailAddress" placeholder="Insira seu email" name="email" value="<?php $_POST['email']; ?>" required>
                     </div>
                     <div class="input-container">
                         <label for="password" class="label"><img src="../assets/img/bx-lock-alt.svg" class="label-icon"><span>Senha*</span></label>
-                        <input type="password" class="input" id="password" placeholder="Insira seu email">
+                        <input type="password" class="input" id="password" placeholder="Insira seu email" name="senha" value="<?php $_POST['senha']; ?>" required>
                     </div>
                     <div class="options-container">
                         <div class="checkbox-container">
@@ -39,7 +69,7 @@
                         </div>
                         <a href="#" class="forgot-password">Esqueceu a senha?</a>
                     </div>
-                    <button class="login-button">Acessar</button>
+                    <button class="login-button" name="btn-acessar">Acessar</button>
                 </form>
             </div>
         </div>
