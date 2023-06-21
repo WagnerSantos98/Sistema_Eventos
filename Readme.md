@@ -35,6 +35,15 @@ Cada item dessa seção tem um botão para efetuar a inscrição do mesmo.
     - [Local]
     - [Sobre o eveto] - pequeno texto informando sobre o evento
     - [Botão de participação] - com uma div oculta e exibir quando clicar | Efetuar inscrição > confirmação de inscrição por email | Link de transmissão caso seja no meet > forma automática e gerar o link através do cadastro do evento sincronizado com o google calendário
+
+### Inscrição
+    - [RA] - disabled
+    - [Nome completo]
+    - [Curso]
+    - [Email]
+
+    Tipo de público
+        Select [Alunos USF, Ex-Aluno USF, Docente USF, Público Externo] - condição: se for aluno usf habilitar o RA | Select no inicio do form.
 ### Login
 
 Interface simples com nível de acesso a página onde irão inserir os eventos e ver a quantidade de ingressante, gerar relatório de eventos, contabilizando quantidade de participantes, cursos, e por período.
