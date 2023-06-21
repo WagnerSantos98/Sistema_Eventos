@@ -46,7 +46,11 @@ Cada item dessa seção tem um botão para efetuar a inscrição do mesmo.
         Select [Alunos USF, Ex-Aluno USF, Docente USF, Público Externo] - condição: se for aluno usf habilitar o RA | Select no inicio do form.
 
     Resumo de inscrição - mostrando as informações anteriores preenchidas e com botão de confirmação da inscrição.
-    
+
+### Acomapnhamento de Eventos
+    Interface de acesso se for aluno logar com RA e senha do USF Connect, dentro da plataforma conter a lista de cursos que já participou e os diplomas constando suas presenças 
+    Se for outro tipo de público utilizar o nº de inscrição e gerar uma senha aleatória para visualizar sua inscrição.
+
 ### Login
 
 Interface simples com nível de acesso a página onde irão inserir os eventos e ver a quantidade de ingressante, gerar relatório de eventos, contabilizando quantidade de participantes, cursos, e por período.
