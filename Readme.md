@@ -27,6 +27,14 @@ Também criar uma galeria dos eventos importantes e notificar o prazo de inscri�
 Nesta página irá conter a listagem dos eventos que terá durante todo o mesmo e que foi inserido pela equipe do NEXT.
 Cada item dessa seção tem um botão para efetuar a inscrição do mesmo.
 
+### Cadastro de Eventos
+    - [Imagem do evento]
+    - [Nome do evento]
+    - [Descrição da forma que será realizado o evento]
+    - [Data]
+    - [Local]
+    - [Sobre o eveto] - pequeno texto informando sobre o evento
+    - [Botão de participação] - com uma div oculta e exibir quando clicar | Efetuar inscrição > confirmação de inscrição por email | Link de transmissão caso seja no meet > forma automática e gerar o link através do cadastro do evento sincronizado com o google calendário
 ### Login
 
 Interface simples com nível de acesso a página onde irão inserir os eventos e ver a quantidade de ingressante, gerar relatório de eventos, contabilizando quantidade de participantes, cursos, e por período.
