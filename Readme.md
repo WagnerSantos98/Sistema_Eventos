@@ -69,7 +69,7 @@ Acessando como ADM terá a possibilidade de adicionar o evento, ver a lista comp
 Acessando como Padrão será possível somente conferir a quantidade de inscritos.
 
 ### Banco de Dados
-Criar a relação das tabelas.
+Criar a relação das tabelas, principalmente nos eventos e alunos.
  - tb_usuarios
  - tb_eventos
  - tb_alunos
