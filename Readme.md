@@ -71,6 +71,6 @@ Acessando como Padrão será possível somente conferir a quantidade de inscrito
 ### Banco de Dados
 Criar a relação das tabelas, principalmente nos eventos e alunos.
 Definir os níveis de acesso.
- - tb_usuarios
- - tb_eventos
+ - tb_usuarios - Administradores (criam eventos, cadastram usuários e verifica a lista de inscrição)
+ - tb_eventos - Listagem de eventos 
  - tb_alunos
