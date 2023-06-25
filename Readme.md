@@ -73,4 +73,4 @@ Criar a relação das tabelas, principalmente nos eventos e alunos.
 Definir os níveis de acesso.
  - tb_usuarios - Administradores (criam eventos, cadastram usuários e verifica a lista de inscrição)
  - tb_eventos - Listagem de eventos 
- - tb_alunos
+ - tb_alunos - Listagem dos alunos inscritos
