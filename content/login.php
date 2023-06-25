@@ -1,7 +1,7 @@
 <?php
 
 //Incluindo conexão com banco de dados
-include_once('./db/conexao.php');
+include_once('../db/conexao.php');
  
 session_start();
 

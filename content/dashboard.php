@@ -1,6 +1,6 @@
 <?php
 //Incluindo conexão com banco de dados e iniciando a seção
-include_once('./db/conexao.php');
+include_once('../db/conexao.php');
 session_start();
 
 /*if (!isset($_SESSION['nome'])) {
